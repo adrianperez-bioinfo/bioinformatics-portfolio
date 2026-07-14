@@ -1,6 +1,6 @@
 # Applied Bioinformatics & Computational Biology Projects
 
-Welcome to my repository. I am an undergraduate student in my third year of a Double Degree in **Biochemistry and Biotechnology**, actively expanding my skills into computational biology, biocomputing, and genomic data processing.
+Welcome to my repository. I am an undergraduate student in my third year of a Double Degree in **Double Degree in Biochemistry and Molecular Biology, and Biotechnology**, actively expanding my skills into computational biology, biocomputing, and genomic data processing.
 
 This repository collects applied bioinformatics projects developed to bridge molecular biology concepts with algorithmic problem-solving using Python and standard biocomputing libraries.
 
