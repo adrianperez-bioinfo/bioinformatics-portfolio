@@ -15,7 +15,7 @@ def mutation_finder(archivo_fasta):
         prot_seqs = list(SeqIO.parse(archivo_fasta,"fasta"))
     except FileNotFoundError:
         return "Error. No se ha encontrado el archivo."
-    if len((prot_seqs)) < 2:
+    if len(prot_seqs) < 2:
         return "Error. El archivo debe contener al menos 2 secuencias."
     
     # Definimos la secuencia de referencia y la secuencia a comparar
