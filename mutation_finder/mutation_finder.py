@@ -1,7 +1,7 @@
 # Importamos las librerías
 import pandas as pd
 
-# Importamos funciones
+# Importamos módulos
 from Bio import SeqIO
 from Bio import Align
 
