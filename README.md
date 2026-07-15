@@ -15,27 +15,35 @@ An exploratory biocomputational workflow developed to model the design of a modu
 * **Libraries Used:** `Biopython` (`SeqIO`, `Seq`, `SeqUtils`), Pandas, NumPy.
 
 ### 2. [Pairwise Mutation Finder & Variant Classifier](mutation_finder/)
-A Python tool designed to perform pairwise sequence alignments between reference and mutated protein sequences, identifying and annotating amino acid modifications.
+A modular command-line (CLI) Python tool designed to perform pairwise sequence alignments between reference and mutated protein sequences, identifying and annotating amino acid modifications.
 * **Methodology:** Implements Needleman-Wunsch/Smith-Waterman optimal alignments via Biopython's `PairwiseAligner` to accurately map variants even in the presence of sequence length discrepancies.
-* **Variant Annotation:** Maps modified positions using standard 1-based clinical numbering and automatically categorizes evolutionary events into **Insertions (INS)**, **Deletions (DEL)**, and **Substitutions (SUS)**.
-* **Libraries Used:** `Biopython` (`Bio.Align`), `pandas`.
-
----
+* **Variant Annotation:** Maps modified positions using standard 1-based clinical numbering and automatically categorizes evolutionary events into Insertions (INS), Deletions (DEL), and Substitutions (SUS).
+* **CLI Architecture & Reliability:** Engineered as a dynamic command-line tool utilizing `sys.argv` for seamless integration into high-throughput Bash pipelines, featuring robust exception handling and automated usage validation.
+* **Libraries Used:** Biopython (Bio.Align), Pandas.
 
 ## Technical Skills
 
-* **Programming & Scripting:** Python (Intermediate level), Bash/Linux terminal (in progress), R (in progress).
+* **Programming & Scripting:** Python (Intermediate level), Bash / Linux Shell Scripting, R (in progress).
+* **Systems & Environment Management:** Native Linux workflows (Ubuntu/WSL), virtual environment isolation (`venv` / Conda) for scientific reproducibility, and data hygiene (`.gitignore`).
 * **Bioinformatics Ecosystem:** Biopython, Pandas, NumPy.
-* **Core Competencies:** Sequence Alignment, Variant Classification, mRNA Therapeutics Modeling, Codon Optimization, FASTA Parsing.
+* **Core Competencies:** Command-Line Tool Development (CLI), Sequence Alignment, Variant Classification, Codon Optimization, FASTA Parsing.
 * **Version Control:** Git & GitHub.
-
----
 
 ## Usage and Setup
 
-To run these scripts or notebooks locally, clone the repository and install the required Python dependencies:
+To run these tools locally in a clean, reproducible environment, clone the repository and set up a Python virtual environment:
 
 ```bash
+# 1. Clone the repository and navigate into it
 git clone [https://github.com/adrianperez-bioinfo/bioinformatics-portfolio.git](https://github.com/adrianperez-bioinfo/bioinformatics-portfolio.git)
 cd bioinformatics-portfolio
+
+# 2. Create and activate an isolated virtual environment
+python3 -m venv bio_env
+source bio_env/bin/activate
+
+# 3. Install the required biocomputing dependencies
 pip install biopython pandas numpy
+
+# 4. Run the Mutation Finder CLI tool with a sample FASTA file
+python3 mutation_finder/mutation_finder.py prot_seq.fasta
