@@ -19,7 +19,7 @@ A modular command-line (CLI) Python tool designed to perform pairwise sequence a
 * **Methodology:** Implements Needleman-Wunsch/Smith-Waterman optimal alignments via Biopython's `PairwiseAligner` to accurately map variants even in the presence of sequence length discrepancies.
 * **Variant Annotation:** Maps modified positions using standard 1-based clinical numbering and automatically categorizes evolutionary events into Insertions (INS), Deletions (DEL), and Substitutions (SUS).
 * **CLI Architecture & Reliability:** Engineered as a dynamic command-line tool utilizing `sys.argv` for seamless integration into high-throughput Bash pipelines, featuring robust exception handling and automated usage validation.
-* **Libraries Used:** Biopython (Bio.Align), Pandas.
+* **Libraries Used:** `Biopython` (`Bio.Align`), Pandas.
 
 ## Technical Skills
 
