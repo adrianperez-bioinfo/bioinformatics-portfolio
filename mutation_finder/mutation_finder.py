@@ -1,5 +1,6 @@
 # Importamos las librerías
 import pandas as pd
+import sys
 
 # Importamos módulos
 from Bio import SeqIO
@@ -47,4 +48,13 @@ def mutation_finder(archivo_fasta):
     df = pd.DataFrame({"POSICIÓN MUTACIONES" : list_mut_positions,"TIPO DE MUTACIÓN" : lista_tipos_mut})
     return df
 
-print(mutation_finder("prot_seq.fasta"))
+# Bloque de control con la terminal de bash
+if __name__ == "__main__":
+    # Protegemos el script en caso de no añadir el archivo fasta
+    if len(sys.argv) < 2:
+        print("Error. No se ha incluido el archivo fasta.")
+        sys.exit(1)
+
+# Mostramos resultados
+archivo_fasta = sys.argv[1]
+print(mutation_finder(archivo_fasta))
